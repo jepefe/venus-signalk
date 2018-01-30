@@ -1,3 +1,8 @@
+# Project moved!
+
+See here for the main repo:
+https://github.com/sbender9/signalk-venus-plugin
+
 # venus-signalk
 
 This code is a [Signal K Node Server](https://github.com/SignalK/signalk-server-node) plugin. It
