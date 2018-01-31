@@ -1,17 +1,41 @@
-# 
+# Installing signalk-server on Venus 
 
 First of all, note that there are two types of install: install signalk server,
-and this plugin, on another machine. And then connect via D-Bus. See README.md
+and this plugin, on another machine. In that situation the plugin connects, over
+the ethernet/wifi network, to the Venus device for data retrieval. See README.md
 for that method.
 
 This document explains an alternative: installing nodejs, signalk-server and this
 plugin onto the Venus device itself, eliminating the need for a separate box.
 
-### Installing the dependencies
+### Diskspace
 
+The CCGX does not have enough diskspace at all, but it can be installed on an 
+sdcard.
+
+The Venus GX has enough, but not in the rootfs. In /scratch there is a spare 
+partition with 2.5GB available.
+
+The raspberrypi might have enough diskspace.
+
+Steps to install outside the rootfs on a Venus GX:
+
+- `mkdir /scratch/signalk`
+- Add a line with `dest signalk /scratch/signalk` to `/etc/opkg/opkg.conf`
+- Add the second `/usr/bin` dir to the path in `/etc/profile`
+
+Then to all opkg commands add `-d signalk`, which specifies an alternate destination.
+
+For the CCGX you could the same, but then on an sdcard. Note that most sdcards
+will be formatted with vfat, which doesn't support the (required) symlinks. So re-
+format the partition to ext3 or ext4 for example. mkfs.ext4 is installed on the ccgx.
+
+### Installing the dependencies
 
 Raspberrypis: take & install the cortexa7hf files.
 CCGX & Venus GX: take & install the cortexa8hf files.
+
+The files are in the [/venus-opkges](/venus-opkges) folder in this repo.
 
 ```
 libssl1.0.0_1.0.2h-r0_cortexa7hf-vfp-vfpv4-neon.ipk
@@ -110,4 +134,7 @@ npm install git+https://github.com/SignalK/signalk-server-node.git
 # tmpfs                   473824       168    473656   0% /var/volatile
 # /dev/mmcblk0p1           40862     12370     28492  30% /u-boot
 # /dev/mmcblk0p4         1889740     59984   1715712   3% /data
+
+and now it was time to install signalk server but apparently I was
+interrupted before completing that; a while back.
 ```
