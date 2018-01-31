@@ -112,4 +112,7 @@ npm install git+https://github.com/SignalK/signalk-server-node.git
 # tmpfs                   473824       168    473656   0% /var/volatile
 # /dev/mmcblk0p1           40862     12370     28492  30% /u-boot
 # /dev/mmcblk0p4         1889740     59984   1715712   3% /data
+
+and now it was time to install signalk server but apparently I was
+interrupted before completing that; a while back.
 ```
