@@ -13,6 +13,8 @@ plugin onto the Venus device itself, eliminating the need for a separate box.
 Raspberrypis: take & install the cortexa7hf files.
 CCGX & Venus GX: take & install the cortexa8hf files.
 
+The files are in the [/venus-opkges](/venus-opkges) folder in this repo.
+
 ```
 libssl1.0.0_1.0.2h-r0_cortexa7hf-vfp-vfpv4-neon.ipk
 libcrypto1.0.0_1.0.2h-r0_cortexa7hf-vfp-vfpv4-neon.ipk
