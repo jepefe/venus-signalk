@@ -1,14 +1,14 @@
-# 
+# Installing signalk-server on Venus 
 
 First of all, note that there are two types of install: install signalk server,
-and this plugin, on another machine. And then connect via D-Bus. See README.md
+and this plugin, on another machine. In that situation the plugin connects, over
+the ethernet/wifi network, to the Venus device for data retrieval. See README.md
 for that method.
 
 This document explains an alternative: installing nodejs, signalk-server and this
 plugin onto the Venus device itself, eliminating the need for a separate box.
 
 ### Installing the dependencies
-
 
 Raspberrypis: take & install the cortexa7hf files.
 CCGX & Venus GX: take & install the cortexa8hf files.
