@@ -64,8 +64,10 @@ without copying around packages yourself:
 # git is required by npm when downloading from github
 opkg install git
 
+# MVA 2018-02-01: outcommented this one, the idea is that all npm packages
+# should now have been fixed to no longer require git-submodules.
 # git-perltools includes git-submodule, which is required by npm
-opkg install git-perltools
+#opkg install git-perltools
 ```
 
 ### Installing signalk server
